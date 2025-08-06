@@ -10,3 +10,8 @@ For the model evaluation code in `bootstrap.ipynb`:
   mitigate inflation of variance from weight being dependent on replica variation. Examples
   within each peptide are resampled with replacement.
 - Censor those test examples which have their TCRs found in the training set
+- Option to use TCR count of test examples for 2D histogram, controlled by a global var
+  DO_USE_TEST_TCR_COUNT
+- Proposed defaults BINS_TCR = np.array([0,11,100000000]) for test TCR bins and a 
+  matching WEIGHT_PER_PEPTIDE_APPLIED_AFTER = 20 to use when evaluating the final 1D histograms
+- Clarifications in comments
